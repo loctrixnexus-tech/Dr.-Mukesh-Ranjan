@@ -1,0 +1,324 @@
+/* BODY BACKGROUND */
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+
+  background:url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5') center/cover no-repeat fixed;
+  position:relative;
+}
+
+/* DARK OVERLAY ON WHOLE PAGE */
+body::before{
+  content:'';
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:linear-gradient(135deg,rgba(0,40,50,0.9),rgba(0,80,90,0.85));
+  z-index:-1;
+}
+
+/* MAIN WRAPPER */
+.appointment-page{
+  max-width:1200px;
+  margin:auto;
+  padding:100px 20px;
+}
+
+/* GRID FIX */
+.appointment-wrapper{
+  display:grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap:40px;
+  align-items:start;
+  margin-top: 58px;
+}
+
+/* LEFT SIDE */
+.appointment-left{
+  color:white;
+  margin-left: 94px;
+}
+
+.appointment-left h1{
+  font-family:'Playfair Display';
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.appointment-left h1 span{
+  color:#14b8a6;
+}
+
+.appointment-left p{
+  opacity:0.8;
+  margin-bottom:25px;
+}
+
+/* FORM BOX */
+.appointment-form{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(18px);
+  padding:30px;
+  width:431px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+/* FORM GRID */
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin-bottom:15px;
+}
+
+.form-row input,
+.form-row select{
+  width:100%;
+  font-size: 17px;
+  padding:18px;
+  border-radius:10px;
+  border:none;
+  outline:none;
+}
+
+/* FIX SELECT */
+.form-row select{
+  background:white;
+  color:black;
+}
+
+/* FULL WIDTH FIELD */
+.form-row.full{
+  grid-template-columns:1fr;
+}
+
+/* BUTTON */
+.submit-btn{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+
+  background:linear-gradient(135deg,#14b8a6,#0f766e);
+  color:white;
+  font-weight:600;
+
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.submit-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 25px rgba(20,184,166,0.8);
+}
+
+/* RIGHT SIDE */
+.appointment-right{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+/* INFO CARDS */
+.info-box{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(15px);
+  padding:20px;
+  border-radius:15px;
+  color:white;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.15);
+  transition:0.3s;
+}
+
+.info-box:hover{
+  transform:translateY(-6px);
+}
+
+.info-box i{
+  font-size:22px;
+  color:#14b8a6;
+  margin-bottom:10px;
+}
+
+/* FAQ */
+.faq{
+  grid-column:span 2;
+}
+
+.faq details{
+  background:rgba(255,255,255,0.05);
+  padding:12px;
+  margin-top:10px;
+  border-radius:10px;
+  color:white;
+  cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .appointment-wrapper{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* RIGHT SIDE UPGRADE */
+.appointment-right{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  margin-left: 65px;
+}
+
+/* PREMIUM GLASS CARDS */
+.info-box{
+  background:rgba(255,255,255,0.07);
+  backdrop-filter:blur(18px);
+  border-radius:18px;
+  padding:25px;
+  text-align:center;
+  color:white;
+
+  border:1px solid rgba(255,255,255,0.15);
+
+  transition:0.4s;
+  position:relative;
+  overflow:hidden;
+}
+
+/* GLOW EFFECT */
+.info-box::before{
+  content:'';
+  position:absolute;
+  width:120%;
+  height:120%;
+  background:url("https://images.unsplash.com/photo-1638202993928-7267aad84c31?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat;
+  top:-20%;
+  left:-20%;
+  opacity:0;
+  transition:0.4s;
+}
+
+.info-box:hover::before{
+  opacity:1;
+}
+
+/* HOVER EFFECT */
+.info-box:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 40px rgba(20,184,166,0.4);
+}
+
+/* ICON */
+.info-box i{
+  font-size:26px;
+  color:#14b8a6;
+  margin-bottom:10px;
+}
+
+/* SPECIAL CARD */
+.highlight{
+  background:linear-gradient(135deg,#14b8a6,#0f766e);
+  color:white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.appointment-page {
+  flex: 1;
+}
+
+
+
+.appointment-page{
+  position:relative;
+  padding:100px 0;
+  background:url('https://plus.unsplash.com/premium_photo-1673953509975-576678fa6710?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+}
+
+/* FIX OVERLAY */
+.appointment-page::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,40,50,0.75); /* lighter */
+  z-index:0;
+}
+
+/* IMPORTANT */
+.appointment-wrapper{
+  position:relative;
+  z-index:2;
+}
+
+/* DOCTOR SECTION */
+.doctor-banner{
+  padding:100px 0;
+  background:#eeeeee;
+}
+
+.doctor-wrapper{
+  width:85%;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:50px;
+}
+
+/* TEXT */
+.doctor-text .small{
+  color:#14b8a6;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.doctor-text h2{
+  font-family:'Playfair Display';
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.doctor-text span{
+  color:#14b8a6;
+}
+
+.doctor-text p{
+  color:#64748b;
+  margin-bottom:20px;
+}
+
+/* BUTTON */
+.doctor-btn{
+  padding:12px 30px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#14b8a6,#0f766e);
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.doctor-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(20,184,166,0.5);
+}
+
+/* IMAGE */
+.doctor-image img{
+  width:125%;
+  height:258px;
+  max-width:450px;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.2);
+}

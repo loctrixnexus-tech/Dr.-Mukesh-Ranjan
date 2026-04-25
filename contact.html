@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+
+  <title>Contact | Glocutis Clinic</title>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="logo">Dr. Mukesh Ranjan</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About us</a>
+    <a class="active" href="contact.html">Contact us</a>
+    <a href="service.html">Services</a>
+  </nav>
+
+  <!-- FIXED BUTTON -->
+  <a href="#appointment" class="nav-btn">Book Appointment</a>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="contact-hero">
+  <div class="contact-overlay"></div>
+
+  <div class="contact-hero-content">
+    <h1>Contact Us</h1>
+    <p>We are here to help you with your skin & laser care needs</p>
+  </div>
+</section>
+
+
+<!-- ================= CONTACT INFO ================= -->
+<section class="contact-main">
+  <div class="contact-container">
+
+    <!-- IMAGE -->
+    <div class="contact-image">
+      <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" alt="Clinic Image">
+    </div>
+
+    <!-- INFO -->
+    <div class="contact-info">
+      <h2>Get In Touch</h2>
+
+      <p>
+        Reach out to us for consultation, appointment booking or any queries.
+        Our team is always ready to assist you.
+      </p>
+
+      <div class="contact-cards">
+
+        <div class="contact-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <h4>Address</h4>
+          <p>Near Jhajha Bus Stand, Jamui</p>
+        </div>
+
+        <div class="contact-card">
+          <i class="fa-solid fa-phone"></i>
+          <h4>Phone</h4>
+          <p>6202343319<br>9570015179</p>
+        </div>
+
+        <div class="contact-card">
+          <i class="fa-solid fa-clock"></i>
+          <h4>Timing</h4>
+          <p>10 AM – 9 PM<br>All Days Open</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= CONTACT FORM ================= -->
+<section class="contact-form-section">
+  <h2 class="keep">Keep In Touch</h2>
+
+<form class="contact-form" id="contactForm">
+<input id="name" type="text" placeholder="Full Name" required>
+ <input id="phone" type="tel" placeholder="+91XXXXXXXXXX" required>
+
+  <div id="recaptcha-container"></div>
+
+  <button type="button" onclick="sendOTP()">Send OTP</button>
+
+  <input id="otp" type="text" placeholder="Enter OTP">
+
+  <button type="button" onclick="verifyOTP()">Verify OTP</button>
+
+</form>
+</section>
+
+
+<!-- ================= MAP ================= -->
+<section class="map-section">
+  <iframe 
+    src="https://maps.google.com/maps?q=jamui&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    loading="lazy">
+  </iframe>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+  <!-- TOP -->
+  <div class="footer-top">
+    <h2>Dr. Mukesh Ranjan</h2>
+
+    <div class="subscribe-box">
+      <input type="email" placeholder="Subscribe to our newsletter!">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="footer-main">
+
+    <!-- HOURS -->
+    <div class="footer-col">
+      <h3>Opening Hours</h3>
+      <p>Mon - Fri: 10:00 AM - 6:00 PM</p>
+      <p>Sat: 10:00 AM - 2:00 PM</p>
+      <p>Sun: Closed</p>
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+
+      <ul class="footer-links">
+        <li><i class="fa-solid fa-house"></i> <a href="index.html">Home</a></li>
+        <li><i class="fa-solid fa-user"></i> <a href="about.html">About</a></li>
+        <li><i class="fa-solid fa-stethoscope"></i> <a href="#">Services</a></li>
+        <li><i class="fa-solid fa-phone"></i> <a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="footer-center">
+      <img src="image/dr.jpeg" alt="Doctor Image">
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h3>GLOCUTIS SKIN & LASER CLINIC</h3>
+      <p>In front of Children’s Park,<br>Jhajha Bus Stand, Jamui</p>
+      <p>📞 6202343319</p>
+      <p>📞 9570015179</p>
+
+      <div class="socials">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    © 2026 Glocutis Skin & Laser Clinic. All rights reserved.
+  </div>
+
+</footer>
+<script src="js/script.js"></script>
+<script type="module" src="js/firebase-otp.js"></script>
+
+</body>
+</html>
